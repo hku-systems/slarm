@@ -1,0 +1,15 @@
+
+enclave {
+
+    include "metadata.h"
+
+    trusted {
+        public Enclave_t* api_new_enclave([user_check] Enclave_t* e);
+        public void api_del_enclave([user_check] Enclave_t* e);
+        public Gaps_t api_db_add([user_check]Enclave_t *e, [user_check]Txn_t *txn);
+        public Txn_t* api_db_get([user_check]Enclave_t *e, int urgent, uint64_t nonce, [user_check]int *ok);
+    };
+    untrusted {
+        int ocall_print_string([in, string]char* s);
+    };
+};

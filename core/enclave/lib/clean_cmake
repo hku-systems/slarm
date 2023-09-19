@@ -1,0 +1,21 @@
+#!/bin/bash
+cd enclave
+rm -rf CMakeCache.txt
+rm -rf CMakeFiles
+rm -rf cmake_install.cmake
+rm -rf *.so
+rm -rf election_t.c
+rm -rf election_t.h
+
+cd ../
+rm -rf CMakeCache.txt
+rm -rf CMakeFiles
+rm -rf cmake_install.cmake
+rm -rf install_manifest.txt 
+rm -rf *.so
+rm -rf *.a
+rm -rf election_u.t
+rm -rf election_u.h
+rm -rf Makefile
+
+find ./ -name "*.cbp" -delete

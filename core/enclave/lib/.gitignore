@@ -1,0 +1,6 @@
+cmake-build-debug/*
+CMakeFiles/*
+CMakeCache.txt
+enclave/cmake-build-debug/*
+enclave/CMakeFiles/*
+enclave/CMakeCache.txt
